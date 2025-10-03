@@ -6,5 +6,14 @@ Peça para o usuário inserir a temperatura do dia anterior (ontem) e também a 
 Ou seja, são duas entradas fornecidas pelos usuários (dois prompts).
 Calcule a média de temperaturas que estão no Array e apresente para o usuário qual foi a média calculada.
     */
-
+let palavras = ['javascript', 'html', 'css', 'desenvolvimento', 'web'];
+let nomeUser = prompt("escreva seu nome");
+let numerosDeP = [];
+palavras.push(nomeUser);
+for(let nome of palavras){
+numerosDeP.push(nome.length);
+}
+let ordenado = [...numerosDeP].sort((a,b)=> b-a);
+const maior = numerosDeP.indexOf(ordenado[0]);
+alert(palavras[maior]);
 </script>
