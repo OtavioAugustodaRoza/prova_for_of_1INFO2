@@ -7,4 +7,17 @@ Você deve perguntar para o usuário qual a porcentagem de aumento e, então, ca
 Apresente para o usuário, no final do programa, a soma de todos os preços que estão no Array.
     */
 
+let catalogo = [89.90, 750.00, 1200.50, 40.00];
+let aumento =Number(prompt("escreva porcentagem de aumento:"));
+let posicao = 0;
+let soma = 0;
+for(let preco of catalogo){
+posicao = catalogo.indexOf(preco);
+catalogo.splice(posicao,1,preco + (preco * aumento / 100) );
+} 
+for(let numero of catalogo){
+soma += numero;
+}
+alert(soma);
+
 </script>

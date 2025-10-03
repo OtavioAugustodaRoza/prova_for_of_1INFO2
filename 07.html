@@ -6,5 +6,11 @@ Pergunte ao usuário quanto será o Juro aplicado nos valores que estão no Arra
 Usando for...of, calcule o custo total de todas as contas já com o juro aplicado.
 Apresente para o usuário qual será o valor final da compra.
     */
-
+const pagas = [50.00, 15.50, 120.00, 80];
+const juros = Number(prompt('Escreva a taxa de juros: '));
+let jusAp = 0;
+for(let conta of pagas){
+    jusAp += conta + (conta * juros /100);    
+}
+alert(jusAp);
 </script>
