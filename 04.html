@@ -6,5 +6,17 @@ Peça para o usuário fornecer o próprio nome e, após, inclua também o nome d
 Você precisa, baseando-se no conteúdo deste Array, descobrir qual a palavra mais longa.
 Apresente para o usuário qual é a palavra mais longa contida no Array.
     */
+let palavras = ['javascript', 'html', 'css', 'desenvolvimento', 'web'];
+let nomeUser = prompt("escreva seu nome");
+let numerosDeP = [];
+palavras.push(nomeUser);
+for(let nome of palavras){
+numerosDeP.push(nome.length);
+}
+let ordenado = [...numerosDeP].sort((a,b)=> b-a);
+const maior = numerosDeP.indexOf(ordenado[0]);
+alert(palavras[maior]);
+
+
 
 </script>
